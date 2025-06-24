@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vampires Boutique</title>
+    <link rel="stylesheet" href="./stylesheets/style.css" />
+    <link rel="javascripts" href="/javascripts/js.js"/>
+  </head>
+  <body>
+     <nav style="background-color:white ;
+    width: 100vw;
+    height: 12vw;
+    margin-top: 0vw;">
+        <div class="menu">
+            <img class="Logo" src="images/Group 183.svg" href="index.html">
+        <div class="links"> 
+        <a class="a2" href="catalog.html">Каталог</a>
+        <a class="a3" href="philials.html">Филиалы</a>
+        <a class="a4" href="afisha.html">Афиша</a>
+        <a class="a5" href="blog.html">Блог</a>
+        <a class="a7" href="otzyvy.html">Отзывы</a>   
+        </div>
+        </div>
+    </nav>
+    <div class="feedback-container">
+      <div class="feedback-header">
+          <div class="feedback-title">Напиши отзыв и получи скидку 5%</div>
+          <div class="feedback-subtitle">Ваше мнение важно для нас!</div>
+      </div>
+      
+      <form action="#" method="POST">
+          <div class="form-group">
+              <label for="name">Ваше имя:</label>
+              <input type="text" id="name" name="name" required>
+          </div>
+          
+          <div class="form-group">
+              <label for="email">Ваш email:</label>
+              <input type="email" id="email" name="email" required>
+          </div>
+          
+          <div class="form-group rating">
+              <label>Оценка:</label>
+              <label><input type="radio" name="rating" value="5" required> ★★★★★</label>
+              <label><input type="radio" name="rating" value="4"> ★★★★</label>
+              <label><input type="radio" name="rating" value="3"> ★★★</label>
+              <label><input type="radio" name="rating" value="2"> ★★</label>
+              <label><input type="radio" name="rating" value="1"> ★</label>
+          </div>
+          
+          <div class="form-group">
+              <label for="message">Ваш отзыв:</label>
+              <textarea id="message" name="message" required></textarea>
+          </div>
+          
+          <button type="submit" class="submit-btn">Отправить отзыв</button>
+      </form>
+  </div>
+
+  </body>

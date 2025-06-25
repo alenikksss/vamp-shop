@@ -8,11 +8,20 @@
     <link rel="javascripts" href="/javascripts/js.js"/>
   </head>
   <body>
-    <button class="burger" aria-label="Меню">
-        <span class="burger__line"></span>
-        <span class="burger__line"></span>
-        <span class="burger__line"></span>
+     <button class="burger" id="burgerBtn" aria-label="Меню">
+      <span class="burger__line"></span>
+      <span class="burger__line"></span>
+      <span class="burger__line"></span>
     </button>
+    <nav class="burger-menu" id="burgerMenu">
+      <ul>
+        <li><a class="a2" href="catalog.html">Каталог</a></li>
+        <li><a class="a4" href="afisha.html">Афиша</a></li>
+        <li><a class="a3" href="philials.html">Филиалы</a></li>
+        <li><a class="a5" href="blog.html">Блог</a></li>
+        <li><a class="a7" href="otzyvy.html">Отзывы</a></li>
+      </ul>
+    </nav>
  
 <nav class="menuu">
   <ul class="menu__list">
@@ -23,7 +32,18 @@
     <li><a href="philials.html" class="menu-link">Филиалы</a></li>
   </ul>
 </nav>
+ <script>
+    const burgerBtn = document.getElementById('burgerBtn');
+    const burgerMenu = document.getElementById('burgerMenu');
 
+    document.addEventListener('click', function(e) {
+      if (burgerBtn.contains(e.target)) {
+        burgerMenu.classList.toggle('open');
+      } else if (!burgerMenu.contains(e.target)) {
+        burgerMenu.classList.remove('open');
+      }
+    });
+    </script>
 <div class="overlay"></div>
 <div class="overlay"></div>
 

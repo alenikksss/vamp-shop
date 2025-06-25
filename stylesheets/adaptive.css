@@ -1,44 +1,88 @@
-/* @media screen and (max-width: 1920px) {
-    #burger {
-    display: block;
-    width: 3vw;
-    height: 2vw;
-    margin: 1vw;
-    cursor: pointer;
-    position: relative;
+@media screen and (max-width: 768px) { 
+    .afisha {
+        width: 26vw;
+        height: 624vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        margin-top: 2vw;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-left: 40vw;
     }
-    #burger::before, #burger::after {
-        position: absolute;
-        left: 0;
-        content: '';
-        width: 100%;
-        height: 2px;
-        background-color: rgb(135, 0, 0);
-        
+    .afisha img {
+        width: 24vw;
+        height: 35vw;
     }
-#burger::before {
-    top: 0;
-    box-shadow: 0 25px 0  rgb(135, 0, 0);
+    .feedback-container {
+        max-width: 10vw;
+        margin-top: 5vw;
+        margin-left: 25vw;
+        background: rgb(103, 103, 103);
+        padding: 2vw;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      }
+      
+      .feedback-header {
+        text-align: center;
+        margin-bottom: 2vw;
+        color: #333;
+      }
+      
+      .feedback-title {
+        font-size: 1vw;
+        font-weight: bold;
+        margin-bottom: 1vw;
+        color: #000000;
+        font-family: "Inter";
+      }
+      
+      
+      .feedback-subtitle {
+        font-size: 1vw;
+        color: #333333;
+      }
+      
+      .form-group {
+        margin-bottom: 1vw;
+      }
+      
+      label {
+        display: block;
+        margin-bottom: 1vw;
+        font-weight: bold;
+        color: #363636;
+      }
+      
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        width: 20vw;
+        padding: 1vw;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 1vw;
+        transition: border 0.3s;
+        font-family: "Inter";
+      }
+      
+      input[type="text"]:focus,
+      input[type="email"]:focus,
+      textarea:focus {
+        border-color: #282828;
+        outline: none;
+      }
+      
+      textarea {
+        height: 10vw;
+        resize: vertical;
+      }
+      .feedback-form button {
+        width: 30vw;
+        height: 4vw;
+      }
+}
 
-}
-#burger::after {
-    top: 13px;
-
-}
-.menu {
-    width: 100%;
-    height: 100vh;
-}
-.links {
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    font-family: "CormorantGaramond";
-    font-size: 2vw;
-    gap: 10px;
-    position: absolute;
-    background-color: #eee;
-}
-
-} */
 

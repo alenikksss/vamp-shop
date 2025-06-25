@@ -83,6 +83,27 @@
         width: 30vw;
         height: 4vw;
       }
+      .article {
+        width: 33vw;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+      }
+      .article p {
+        font-size: 1vw;
+        color: white;
+        font-family: "CormorantGaramond";
+        text-align: justify;
+        margin-left: 4vw;
+      }
+      .article h2 {
+        font-size: 1vw;
+        color: white;
+        font-family: "Inter";
+        margin-left: 4vw;
+        margin-top: 2vw;
+      }
 }
 
 

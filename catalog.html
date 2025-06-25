@@ -13,16 +13,52 @@
     height: 12vw;
     margin-top: 0vw;">
         <div class="menu">
-            <img class="Logo" src="images/Group 183.svg" href="index.html">
-        <div class="links"> 
-        <a class="a2" href="catalog.html">Каталог</a>
-        <a class="a3" href="philials.html">Филиалы</a>
-        <a class="a4" href="afisha.html">Афиша</a>
-        <a class="a5" href="blog.html">Блог</a>
-        <a class="a7" href="otzyvy.html">Отзывы</a>   
-        </div>
+          <a href="index.html"><img class="Logo" src="images/Group 183.svg" ></a>
+          
+          <div class="links"> 
+             <a class="a2" href="catalog.html">Каталог</a>
+               <a class="a3" href="philials.html">Филиалы</a>
+             <a class="a4" href="afisha.html">Афиша</a>
+             <a class="a5" href="blog.html">Блог</a>
+              <a class="a7" href="otzyvy.html">Отзывы</a>   
+           </div>
         </div>
     </nav>
+
+    <nav class="burger-menu" id="burgerMenu">
+      <ul>
+        <li><a class="a2" href="catalog.html">Каталог</a></li>
+        <li><a class="a4" href="afisha.html">Афиша</a></li>
+        <li><a class="a3" href="philials.html">Филиалы</a></li>
+        <li><a class="a5" href="blog.html">Блог</a></li>
+        <li><a class="a7" href="otzyvy.html">Отзывы</a></li>
+      </ul>
+    </nav>
+    <nav class="menuu">
+      <ul class="menu__list">
+        <li><a href="catalog.html" class="menu-link">Каталог</a></li>
+        <li><a href="afisha.html" class="menu-link">Афиша</a></li>
+        <li><a href="blog.html" class="menu-link">Блог</a></li>
+        <li><a href="otzyvy.html" class="menu-link">Отзывы</a></li>
+        <li><a href="philials.html" class="menu-link">Филиалы</a></li>
+      </ul>
+    </nav>
+     <script>
+        const burgerBtn = document.getElementById('burgerBtn');
+        const burgerMenu = document.getElementById('burgerMenu');
+    
+        document.addEventListener('click', function(e) {
+          if (burgerBtn.contains(e.target)) {
+            burgerMenu.classList.toggle('open');
+          } else if (!burgerMenu.contains(e.target)) {
+            burgerMenu.classList.remove('open');
+          }
+        });
+        </script>
+
+<div class="overlay"></div>
+<div class="overlay"></div>
+
     <div class="odezhda">
       <div class="odezhda1">
         <img src="images/1.png">
@@ -51,6 +87,7 @@
 </div>
 
 <div class="podval">
+  <img src="images/Rectangle 142.png">
   <div class="fpart">
       <div class="contacts">
         <p>Контакты:</p>
@@ -64,19 +101,25 @@
   </div>
   <div class="spart">
     <div class="cont">
-      <p1>8(985)-241-81-19
+      <p>8(985)-241-81-19 <br>
         8(916)-555-27-19</p>
     </div>
     <div class="adress">
-      <p2>
+      <p>
         Ходынская улица,2 
+      </p>
+      <p>
         Малая пионерская улица,5
       </p>
     </div>
     <div class="time">
-      <p3>Пн-Пт: 09:00-21:00
+      <p>Пн-Пт: 09:00-21:00
         Сб-Вс: 10:00-20:00</p>
     </div>
 </div>
-  </body>
+</div>
+<div class="tpart">
+  <p>Sanguis</p>
+</div>
+</body>
 

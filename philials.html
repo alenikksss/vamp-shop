@@ -5,15 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vampires Boutique</title>
     <link rel="stylesheet" href="./stylesheets/style.css" />
-    <link rel="javascripts" href="/javascripts/js.js"/>
+    <link rel="javascripts" href="/javascripts/philials.js"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
   <body>
+    <button class="burger" id="burgerBtn" aria-label="Меню">
+      <span class="burger__line"></span>
+      <span class="burger__line"></span>
+      <span class="burger__line"></span>
+    </button>
+    <nav class="burger-menu" id="burgerMenu">
+      <ul>
+        <li><a class="a2" href="catalog.html">Каталог</a></li>
+        <li><a class="a4" href="afisha.html">Афиша</a></li>
+        <li><a class="a3" href="philials.html">Филиалы</a></li>
+        <li><a class="a5" href="blog.html">Блог</a></li>
+        <li><a class="a7" href="otzyvy.html">Отзывы</a></li>
+      </ul>
+    </nav>
+    <nav class="menuu">
+      <ul class="menu__list">
+        <li><a href="catalog.html" class="menu-link">Каталог</a></li>
+        <li><a href="afisha.html" class="menu-link">Афиша</a></li>
+        <li><a href="blog.html" class="menu-link">Блог</a></li>
+        <li><a href="otzyvy.html" class="menu-link">Отзывы</a></li>
+        <li><a href="philials.html" class="menu-link">Филиалы</a></li>
+      </ul>
+    </nav>
+     <script>
+        const burgerBtn = document.getElementById('burgerBtn');
+        const burgerMenu = document.getElementById('burgerMenu');
+    
+        document.addEventListener('click', function(e) {
+          if (burgerBtn.contains(e.target)) {
+            burgerMenu.classList.toggle('open');
+          } else if (!burgerMenu.contains(e.target)) {
+            burgerMenu.classList.remove('open');
+          }
+        });
+        </script>
+
+<div class="overlay"></div>
+<div class="overlay"></div>
+
      <nav style="background-color:white ;
     width: 100vw;
     height: 12vw;
     margin-top: 0vw;">
         <div class="menu">
-            <img class="Logo" src="images/Group 183.svg" href="index.html">
+          <a href="index.html"><img class="Logo" src="images/Group 183.svg" ></a>
         <div class="links"> 
         <a class="a2" href="catalog.html">Каталог</a>
         <a class="a3" href="philials.html">Филиалы</a>
@@ -23,5 +64,142 @@
         </div>
         </div>
     </nav>
-    
+<!-- <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-wrapper"><img src="images/realistic_photo_of_the_interior_of_a_vampire_boutique_inside_is_a_gloomy_but_stylish_space_with_vel_nd9px5lbjgb8dbb5sxwq_2 1 — копия.png"></div>
+      <div class="swiper-wrapper"><img src="images/realistic_photo_of_the_interior_of_a_vampire_boutique_inside_is_a_gloomy_but_stylish_space_with_vel_lwvw9ef44gj3qg5m9r01_3 1 — копия.png"></div>
+      <div class="swiper-wrapper"><img src="images/realistic_photo_of_the_interior_of_a_vampire_boutique_inside_is_a_gloomy_but_stylish_space_with_vel_lbpsge5xkm9thti4nonz_0 2 — копия.png"></div>
+      <div class="swiper-wrapper"><img src="images/realistic_photo_of_the_interior_of_a_vampire_boutique_inside_is_a_gloomy_but_stylish_space_with_vel_4jrgzzluvwmwev5ae1wm_1 2 — копия.png"></div>
+    </div>
+    <div class="swiper-scrollbar"></div>
+    <div class="swiper-pagination"></div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-scrollbar"></div>
+</div>
+</div> -->
+
+<div class="gallery">
+  <div class="gallery-container">
+      <div class="slides">
+          <div class="slide">
+              <img src="images/realistic_photo_of_the_interior_of_a_vampire_boutique_inside_is_a_gloomy_but_stylish_space_with_vel_nd9px5lbjgb8dbb5sxwq_2 1 — копия.png">
+          </div>
+          <div class="slide">
+              <img src="images/realistic_photo_of_the_interior_of_a_vampire_boutique_inside_is_a_gloomy_but_stylish_space_with_vel_lwvw9ef44gj3qg5m9r01_3 1 — копия.png" >
+          </div>
+          <div class="slide">
+              <img src="images/realistic_photo_of_the_interior_of_a_vampire_boutique_inside_is_a_gloomy_but_stylish_space_with_vel_lbpsge5xkm9thti4nonz_0 2 — копия.png">
+          </div>
+          <div class="slide">
+              <img src="images/realistic_photo_of_the_interior_of_a_vampire_boutique_inside_is_a_gloomy_but_stylish_space_with_vel_4jrgzzluvwmwev5ae1wm_1 2 — копия.png">
+          </div>
+      </div>
+      
+      <div class="gallery-controls">
+          <button class="prev">&#10094;</button>
+          <button class="next">&#10095;</button>
+      </div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const slides = document.querySelector('.slides');
+        const slideItems = document.querySelectorAll('.slide');
+        const prevBtn = document.querySelector('.prev');
+        const nextBtn = document.querySelector('.next');
+        const dots = document.querySelectorAll('.dot');
+        
+        let currentIndex = 0;
+        const totalSlides = slideItems.length;
+        
+
+        function updateSlider() {
+            slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+            
+            
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentIndex);
+            });
+        }
+        
+       
+        nextBtn.addEventListener('click', function() {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateSlider();
+        });
+        
+        
+        prevBtn.addEventListener('click', function() {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            updateSlider();
+        });
+        
+      
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        slides.addEventListener('touchstart', function(e) {
+            touchStartX = e.changedTouches[0].screenX;
+        }, {passive: true});
+        
+        slides.addEventListener('touchend', function(e) {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, {passive: true});
+        
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) {
+                
+                currentIndex = (currentIndex + 1) % totalSlides;
+            } else if (touchEndX > touchStartX + 50) {
+                
+                currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            }
+            updateSlider();
+        }
+    });
+</script>
+<div class="podval">
+  <style>
+    .podval {
+      margin-left: -30vw;
+    }
+    .tpart {
+      margin-left: 9vw;
+    }
+  </style>
+  <img src="images/Rectangle 142.png">
+  <div class="fpart">
+      <div class="contacts">
+        <p>Контакты:</p>
+      </div>
+      <div class="philialss">
+        <p>Филиалы:</p>
+      </div>
+      <div class="rezhim">
+        <p>Режим работы:</p>
+      </div>
+  </div>
+  <div class="spart">
+    <div class="cont">
+      <p>8(985)-241-81-19 <br>
+        8(916)-555-27-19</p>
+    </div>
+    <div class="adress">
+      <p>
+        Ходынская улица,2 
+      </p>
+      <p>
+        Малая пионерская улица,5
+      </p>
+    </div>
+    <div class="time">
+      <p>Пн-Пт: 09:00-21:00
+        Сб-Вс: 10:00-20:00</p>
+    </div>
+</div>
+</div>
+<div class="tpart">
+  <p>Sanguis</p>
+</div>
   </body>

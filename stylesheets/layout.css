@@ -478,7 +478,6 @@ textarea {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  
 }
 .article p {
   font-size: 2vw;
@@ -586,4 +585,7 @@ textarea {
   .slides {
       height: 300px;
   }
+}
+.ff {
+  margin-left: 5vw;
 }
